@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block content %}
+      <img class="logo" src="/static/img/Logo-pink.png" alt="Logo">
+      
+      <div class="recommendation">
+        {% for item in item_list %}
+          <div class="rec-block">
+            <div class="background-img">
+              <a class="item-image" href="{% url 'shop:item-detail' item.id %}">
+                <img class="item-image" src="{{ item.image.url }}" alt="{{ item.name }}">
+              </a>
+            </div>
+    
+            <div class="item-name">
+              <p>{{ item.name }}</p>
+              <p>{{ item.price }} €$</p>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+  
+      {% for item in item_list %}
+        <div class="item-big">
+          <div class="item-big-images">
+              <a href="{% url 'shop:item-detail' item.id %}">
+                <img class="item-big-image" src="{{ item.image.url }}" alt="{{ item.name }}">
+              </a>
+          </div>
+          <div class="item-big-text">
+            <h1>{{ item.name }}</h1>
+            <p>{{ item.description }}</p>
+          </div>
+
+        </div>
+      {% endfor %}
+  
+{% endblock %}

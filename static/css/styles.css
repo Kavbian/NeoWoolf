@@ -1,0 +1,248 @@
+.logo {
+    width: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
+
+.column{
+    min-height: 100vh;
+}
+
+.center-column {
+    width: 100%;
+    margin-left: 250px; /* Відступ для лівої колонки */
+    margin-right: 250px; /* Відступ для правої колонки */
+    padding: 20px; /* Додаткові відступи для основного контенту */
+    overflow-y: auto; /* Дозволяє прокручування вмісту */
+    height: 100vh; /* Висота на весь екран */
+    background-color: black;
+}
+
+.center-column::-webkit-scrollbar {
+    width: 0px;
+}
+
+.left-column, .right-column {
+    width: 250px;
+    position: fixed; /* Фіксоване положення для бокових панелей */
+    top: 0; /* Відстань від верхнього краю */
+    height: 100%; /* Висота на весь екран */
+    padding: 1%;
+    background-color: #9C0D50;
+}
+
+.left-column {
+    left: 0; /* Прикріплення до лівого краю */
+    background: linear-gradient(to right, black 75%, #9C0D50);
+}
+
+.right-column {
+    right: 0; /* Прикріплення до правого краю */
+    background: linear-gradient(to left, black 75%, #9C0D50);
+}
+
+ul{
+    list-style: none;
+}
+
+body{
+    display: flex;
+}
+
+.item-list-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    height: 30vh;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.recommendation{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-around;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+}
+
+.rec-block{
+    display: flex;
+    flex-direction: column;
+    width: 256px;
+    height: 335px;
+    background: linear-gradient(to top, #9C0D50, transparent 90%, #9C0D50);
+    border-radius: 25px;
+    align-items: center;
+    justify-content: center;
+}
+
+.background-img{
+    display: flex;
+    flex-direction: column;
+    width: 222px;
+    height: 222px;
+    background-color: white;
+    border-radius: 14px;
+    margin-top: 5%;
+}
+
+.item-image{
+    height: 200px;
+    width: 200px;
+    margin: auto;
+    background-color: white;
+}
+
+.item-image{
+    height: 200px;
+    width: 200px;
+    margin: auto;
+    background-color: white;
+}
+
+.item-image-detail{
+    height: 500px;
+    width: 500px;
+}
+
+.background-image-detail{
+    width: 500px;
+    height: 500px;
+    background-color: white;
+    border-radius: 14px;
+    float: left;
+    margin-right: 3%;
+}
+
+.description-detail{
+    color: white;
+    font-size: 50px;
+}
+
+
+.item-name{
+    background-color: transparent;
+    display: block;
+    margin: 0;
+    padding: 0;
+    width: 222px;
+}
+
+.item-name p{
+    margin: 0;
+    padding: 0;
+    color: white;
+    text-align: center;
+    font-size: 30px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.menu{
+    color: white;
+    font-size: 100px;
+}
+
+.menu-options{
+    color: white;
+    font-size: 40px;
+    margin-left: 0;
+    padding: 0;
+}
+
+.profile-picture {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    height: 85px;
+    width: 85px;
+    border-radius: 50%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.profile-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.username{
+    color: white;
+    text-align: center;
+    font-size: 40px;
+    margin: 0;
+}
+
+a{
+    color: white;
+}
+
+a:hover{
+    color: #9C0D50;
+    text-decoration: none;
+    transform: scale(0.9);
+}
+
+.page-big-title{
+    margin: 0 0 1%;
+    color: #9C0D50;
+    text-align: center;
+    font-size: 100px;
+}
+
+.neo-hr{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0px;
+}
+
+.item-big{
+    display: flex;
+    height: 700px;
+    width: 100%;
+    background: linear-gradient(to top, #9C0D50, transparent, #9C0D50);
+    border-radius: 25px;
+    margin-bottom: 20px;
+    padding: 2%;
+}
+
+.item-big-image{
+    display: flex;
+    flex-direction: column;
+    float: left;
+    height: 600px;
+    object-fit: cover;
+}
+
+.item-big-images{
+    display: flex;
+}
+
+.item-big-text{
+    width: 100%;
+    margin-left: 2%;
+    display: flex;
+    flex-direction: column;
+}
+
+.item-big-text h1{
+    color: white;
+    font-size: 80px;
+    text-align: center;
+}
+
+.item-big p{
+    color: white;
+    font-size: 50px;
+}
