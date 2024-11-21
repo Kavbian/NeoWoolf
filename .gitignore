@@ -5,13 +5,3 @@ __pycache__/
 # Ignore environment files
 .env
 venv/
-
-# Ignore Django migrations
-*/migrations/
-
-# Ignore database files
-*.sqlite3
-
-# Ignore static and media files
-staticfiles/
-media/
