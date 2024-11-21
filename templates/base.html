@@ -21,20 +21,16 @@
 </head>
 
 <body>
-  {% block sidebar %}
-    {% include "includes/sidebar.html" %}
+  {% block header %}
+    {% include "includes/header.html" %}
   {% endblock %}
   
-  <div class="column center-column">
-    {% block content %}
-    {% endblock %}
-  </div>
+  {% block content %}
+  {% endblock %}
 
-  <div class="column right-column">
-    {% block right-sidebar %}
-      {% include "includes/right-sidebar.html" %}
-    {% endblock %}
-  </div>
+  {% block footer %}
+{#    {% include "includes/footer.html" %}#}
+  {% endblock %}
 
 </body>
 

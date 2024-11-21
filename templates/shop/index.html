@@ -1,22 +1,20 @@
 {% extends "base.html" %}
 {% block content %}
-      <img class="logo" src="/static/img/Logo-pink.png" alt="Logo">
       
-      <div class="recommendation">
-        {% for item in item_list %}
-          <div class="rec-block">
-            <div class="background-img">
-              <a class="item-image" href="{% url 'shop:item-detail' item.id %}">
-                <img class="item-image" src="{{ item.image.url }}" alt="{{ item.name }}">
-              </a>
-            </div>
-    
-            <div class="item-name">
-              <p>{{ item.name }}</p>
-              <p>{{ item.price }} €$</p>
-            </div>
-          </div>
-        {% endfor %}
+      <div 
+          class="
+            recommendation
+            d-flex 
+            justify-content-between 
+            align-items-center 
+            p-1
+            m-1
+            "
+      >
+        <h1 class="recommendation-title">
+          FIGHT FOR US AND GET 90% OFF
+        </h1>
+        <img src="media/Recommendation-img.png" alt="">
       </div>
   
       {% for item in item_list %}
