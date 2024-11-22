@@ -16,6 +16,7 @@ header {
     height: 90px;
     background-color: black;
     border: var(--accent-color) 2px solid;
+    padding: 1vh 10vw;
 }
 
 .profile-picture {
