@@ -1,6 +1,7 @@
 :root {
     --accent-color: #9C0D50;
     --second-color: #C2F9BB;
+
 }
 
 body {
@@ -114,3 +115,4 @@ header {
     text-align: center;
     font-size: 150%;
 }
+
