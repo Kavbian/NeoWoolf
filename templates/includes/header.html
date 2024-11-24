@@ -1,8 +1,16 @@
 <header class="w-100">
     <div class="d-flex justify-content-between align-items-center w-100 h-100">
-        <img src="/static/img/Logo-pink.png" alt="Logo" class="header-logo h-100">
+      <div class="header-left h-100 d-flex align-items-center">
+        <a href="{% url 'shop:index' %}" class="h-100 d-flex align-items-center">
+          <img src="/static/img/Logo-pink.png" alt="Logo" class="header-logo h-100">
+        </a>
+        <a href="{% url 'shop:military' %}" class="header-military ml-2">MILITARY</a>
+        <a href="{% url 'shop:item-list' %}" class="header-chrome ml-2">CHROME</a>
+      </div>
+      <div class="header-right h-100">
         <div class="profile-picture h-100">
           <img class="profile-picture-image h-100" src="{{ user.userprofile.image.url }}" alt="{{ user.username }}">
         </div>
+      </div>
     </div>
 </header>

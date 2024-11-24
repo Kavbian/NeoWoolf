@@ -21,3 +21,7 @@ def item_detail_view(request: HttpRequest, pk: int) -> HttpResponse:
     item = Item.objects.get(id=pk)
     context = {"item": item, }
     return render(request, "shop/item_detail.html", context=context)
+
+
+def military_view(request: HttpRequest) -> HttpResponse:
+    return render(request, "shop/military.html")

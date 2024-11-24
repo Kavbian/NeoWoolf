@@ -13,7 +13,7 @@ body {
 }
 
 header {
-    height: 90px;
+    height: 50px;
     background-color: black;
     border: var(--accent-color) 2px solid;
     padding: 1vh 10vw;
@@ -113,4 +113,99 @@ header {
     align-items: center;
     text-align: center;
     font-size: 150%;
+}
+
+.header-military {
+    position: relative;
+    color: white;
+    text-decoration: none;
+    font-family: 'Geist Mono', monospace;
+    font-weight: 700;
+    z-index: 1;
+}
+
+.header-military:hover {
+    color: #cccccc;
+    text-decoration: none;
+}
+
+.header-military:hover::before,
+.header-military:hover::after {
+    content: "MILITARY";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    animation: glitch 1.2s steps(2, end) infinite;
+}
+
+.header-military:hover::before {
+    color: darkred;
+    z-index: -2;
+}
+
+.header-military:hover::after {
+    color: darkorchid;
+    z-index: -3;
+    animation-delay: 0.2s;
+}
+
+@keyframes glitch {
+    0% {
+        transform: translate(2px, -2px);
+    }
+    20% {
+        transform: translate(-2px, 2px);
+    }
+    40% {
+        transform: translate(0, 0);
+    }
+    60% {
+        transform: translate(-1px, 1px);
+    }
+    80% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(-1px, -1px);
+    }
+}
+
+.header-chrome {
+    position: relative;
+    color: white;
+    text-decoration: none;
+    font-family: 'Geist Mono', monospace;
+    font-weight: 700;
+    z-index: 1;
+}
+
+.header-chrome:hover {
+    color: #cccccc;
+    text-decoration: none;
+}
+
+.header-chrome:hover::before,
+.header-chrome:hover::after {
+    content: "CHROME";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    animation: glitch 1.2s steps(2, end) infinite;
+}
+
+.header-chrome:hover::before {
+    color: darkred;
+    z-index: -2;
+}
+
+.header-chrome:hover::after {
+    color: darkorchid;
+    z-index: -3;
+    animation-delay: 0.2s;
 }
