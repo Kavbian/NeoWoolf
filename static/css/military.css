@@ -2,7 +2,10 @@ body {
     margin: 0;
     padding: 0;
   }
-  
+
+  html {
+  scroll-behavior: smooth;
+}
   .join-us-container {
     margin: 0;
     padding: 0;
@@ -47,7 +50,19 @@ body {
     bottom: 15%;
     transform: translateX(-50%);
   }
-  
+
+  a.banner-button {
+  text-decoration: none;
+    display: grid;
+    place-items: center;
+    font-size: 5vh;
+}
+
+  a.banner-button:hover {
+    color: black;
+    background-color: var(--second-color);
+  }
+
   .slogan {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -151,7 +166,11 @@ body {
       width: 50%;
       height: 8vh;
     }
-  
+
+    a.banner-button {
+      font-size: clamp(2rem, 2.5vw, 3rem);
+    }
+
     .slogan-img {
       width: 70%;
       margin: 10px 0;
@@ -170,16 +189,103 @@ body {
       text-align: center;
     }
   }
-  
+  .form-container {
+    background-color: #9C0D50;
+    padding: 30px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 900px;
+    margin: 20px;
+}
+
+.form-container form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.block {
+    flex: 1 1 45%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    width: 100%;
+}
+
+.form-container label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-container input[type="text"],
+.form-container input[type="radio"],
+.form-container input[type="checkbox"] {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #C2F9BB;
+    border-radius: 4px;
+    background-color: #c2f9bb83;
+    color: #C2F9BB;
+    box-sizing: border-box;
+}
+
+.form-container input[type="radio"],
+.form-container input[type="checkbox"] {
+    width: auto;
+    margin-right: 5px;
+    accent-color: #9C0D50;
+}
+
+.form-container p {
+    margin: 0 0 5px;
+}
+.join-btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #C2F9BB;
+    color: #9C0D50;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.join-btn:hover {
+    background-color: #a9e8a1;
+}
+
+@media (max-width: 768px) {
+    .block {
+        flex: 1 1 100%;
+    }
+}
   @media (max-width: 480px) {
     .banner-button {
       height: 6vh;
       font-size: clamp(2rem, 4vw, 3rem);
       left: 50%;
     }
-  
+
+    a.banner-button {
+      font-size: clamp(1rem, 4vw, 2rem);
+    }
+
     .slogan-text {
       font-size: clamp(2rem, 5vw, 8rem);
+    }
+
+    .form-container h1 {
+      font-size: 20px;
     }
   }
   
