@@ -17,11 +17,11 @@
         <h1 class="recommendation-title">
           FIGHT FOR US AND GET 90% OFF
         </h1>
-        <a href="{% url 'shop:item-list' %}" class="btn btn-recommendation">
+        <a href="{% url 'shop:military' %}" class="btn btn-recommendation">
           JOIN NOW
         </a>
       </div>
-      <img src="media/Recommendation-img.png" alt="Recommendation Image" class="recommendation-image">
+      <img src="{% static 'img/Recommendation-img.png' %}" alt="Recommendation Image" class="recommendation-image">
     </div>
 
     <div class="item-list d-flex flex-column flex-lg-row flex-wrap w-100 my-5">
