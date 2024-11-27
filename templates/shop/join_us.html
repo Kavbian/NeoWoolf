@@ -1,4 +1,9 @@
 {% extends "base.html" %} 
+
+{% block head %}
+    {% load static %}
+{% endblock %}
+
 {% block content %}
 <div class="join-us-container">
   <div class="join-us-banner">
@@ -9,7 +14,7 @@
   <div class="slogan">
     <div id="slogan1-container">
       <img
-        src="{% static 'img/slogan1.png.png' %}"
+        src="{% static 'img/slogan1.png' %}"
         alt="Placeholder Image"
         class="slogan-img"
         id="slogan1"
@@ -21,7 +26,7 @@
 
     <div id="slogan2-container">
       <img
-        src="{% static 'img/slogan2.png.png' %}"
+        src="{% static 'img/slogan2.png' %}"
         alt="Placeholder Image"
         class="slogan-img"
         id="slogan2"

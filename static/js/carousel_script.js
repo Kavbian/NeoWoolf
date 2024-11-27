@@ -1,21 +1,31 @@
-const carousel = document.querySelector('.carousel-images');
-const images = document.querySelectorAll('.carousel-images img');
-let currentIndex = 0;
+document.addEventListener('DOMContentLoaded', function() {
+        const carouselImages = document.querySelector('.carousel-images');
+        const images = carouselImages.querySelectorAll('img');
+        let currentIndex = 0;
 
-function updateCarousel() {
-    const width = images[currentIndex].clientWidth;
-    carousel.style.transform = `translateX(-${currentIndex * width}px)`;
-}
+        function updateCarousel() {
+            const offset = -currentIndex * 100;
+            carouselImages.style.transform = `translateX(${offset}%)`;
+        }
 
-function prevImage() {
-    currentIndex = (currentIndex > 0) ? currentIndex - 1 : images.length - 1;
-    updateCarousel();
-}
+        function nextImage() {
+            if (currentIndex < images.length - 1) {
+                currentIndex++;
+            } else {
+                currentIndex = 0;
+            }
+            updateCarousel();
+        }
 
-function nextImage() {
-    currentIndex = (currentIndex < images.length - 1) ? currentIndex + 1 : 0;
-    updateCarousel();
-}
+        function prevImage() {
+            if (currentIndex > 0) {
+                currentIndex--;
+            } else {
+                currentIndex = images.length - 1;
+            }
+            updateCarousel();
+        }
 
-window.addEventListener('resize', updateCarousel);
-
+        document.querySelector('.carousel-button.right').addEventListener('click', nextImage);
+        document.querySelector('.carousel-button.left').addEventListener('click', prevImage);
+    });
