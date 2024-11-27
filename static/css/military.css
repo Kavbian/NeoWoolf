@@ -52,8 +52,6 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    width: 100%;
-    height: 100%;
     place-items: center;
     clip-path: polygon(
       0 0,
@@ -118,7 +116,7 @@ body {
   }
   
   .slogan-text {
-    font-size: clamp(4rem, 8vw, 18vh);
+    font-size: clamp(3rem, 6vw, 18vh);
     padding: 10px;
     background: radial-gradient(circle, var(--second-color), var(--accent-color));
     -webkit-background-clip: text;
