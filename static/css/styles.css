@@ -38,12 +38,14 @@ header {
 .recommendation {
     border: var(--accent-color) 3px solid;
     background: linear-gradient(to right, black, var(--accent-color));
-    height: 50vh;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
 }
 
 .recommendation-title {
     color: var(--second-color);
-    font-size: 7vh;
+    font-size: 4vh;
     width: 25vw;
     font-family: 'Geist Mono', monospace;
     font-weight: 300;
@@ -65,9 +67,10 @@ header {
 
 .recommendation-image {
     height: 100%;
-    width: 65%;
-    object-fit: cover;
+    width: 60%;
+    object-fit: contain;
 }
+
 
 .item-list-item {
     border: var(--accent-color) 2px solid;
@@ -77,13 +80,13 @@ header {
     padding: 2%;
 }
 .item-list-item-img {
-    width: 65%;
+    width: 50%;
     object-fit: contain;
 }
 
 .item-list-item-info {
     height: 100%;
-    width: 35%;
+    width: 50%;
     padding-left: 5%;
     color: var(--second-color);
 }
@@ -116,3 +119,61 @@ header {
     font-size: 150%;
 }
 
+@media (max-width: 1024px) {
+    .recommendation-title {
+        font-size: 3vh;
+    }
+
+    .btn-recommendation {
+        font-size: 3vh;
+    }
+
+    .item-list-item {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .recommendation {
+        position: relative;
+    }
+
+    .recommendation-title {
+        display: none;
+    }
+
+    .btn-recommendation {
+        position: absolute;
+        width: 50vw;
+        left: 50%;
+        bottom: 0;
+        height: 6vh;
+        font-size: 120%;
+        transform: translate(-50%, -50%);
+    }
+
+    .recommendation-image {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .btn-recommendation {
+        height: 4vh;
+        font-size: 100%;
+        padding: 0.5rem;
+    }
+
+    .item-list-item-info h3 {
+        font-size: 100%;
+    }
+
+    .item-list-item-info p {
+        font-size: 90%;
+    }
+
+    .item-list-item-info .btn {
+        font-size: 90%;
+    }
+}

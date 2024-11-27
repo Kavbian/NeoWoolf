@@ -23,7 +23,7 @@
         <img src="media/Recommendation-img.png" alt="Recommendation Image" class="recommendation-image">
       </div>
 
-      <div class="item-list d-flex flex-wrap w-100 my-5">
+      <div class="item-list d-flex flex-column flex-lg-row flex-wrap w-100 my-5">
         {% for item in item_list %}
           <div class="item-list-item d-flex">
             <img src="{{ item.image.url }}" alt="{{ item.name }}" class="item-list-item-img">
@@ -37,18 +37,5 @@
           </div>
         {% endfor %}
       </div>
-{#        <div class="item-big">#}
-{#          <div class="item-big-images">#}
-{#              <a href="{% url 'shop:item-detail' item.id %}">#}
-{#                <img class="item-big-image" src="{{ item.image.url }}" alt="{{ item.name }}">#}
-{#              </a>#}
-{#          </div>#}
-{#          <div class="item-big-text">#}
-{#            <h1>{{ item.name }}</h1>#}
-{#            <p>{{ item.description }}</p>#}
-{#          </div>#}
-{##}
-{#        </div>#}
-
-  
+    
 {% endblock %}
