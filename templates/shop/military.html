@@ -1,5 +1,37 @@
-{% extends "base.html" %}
+{% extends "base.html" %} 
+
+{% block head %}
+    {% load static %}
+{% endblock %}
 
 {% block content %}
-  <h1>Something about US</h1>
+<div class="join-us-container">
+  <div class="join-us-banner">
+    <img src="{% static 'img/join_us_banner.png' %}" alt="Join Us Banner" />
+    <button class="banner-button">Join us</button>
+  </div>
+
+  <div class="slogan">
+    <div id="slogan1-container">
+      <img
+        src="{% static 'img/slogan1.png' %}"
+        alt="Placeholder Image"
+        class="slogan-img"
+        id="slogan1"
+      />
+    </div>
+    
+    <h1 class="slogan-text">Wake the f*ck up, Wolf.</h1>
+    <h1 class="slogan-text">We have vampires to burn.</h1>
+
+    <div id="slogan2-container">
+      <img
+        src="{% static 'img/slogan2.png' %}"
+        alt="Placeholder Image"
+        class="slogan-img"
+        id="slogan2"
+      />
+    </div>
+  </div>
+</div>
 {% endblock %}
