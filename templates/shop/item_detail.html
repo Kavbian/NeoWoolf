@@ -19,16 +19,16 @@
       </div>
       
       <div class="item-infobox">
-          <div class="infobox-title">SILVERHAND</div>
-          <div class="infobox-description">Upper limb implant to party like it's 2023</div>
-          <div class="infobox-rating">Rating: 4.5/5</div>
+          <div class="infobox-title">{{ item.name }}</div>
+          <div class="infobox-description">{{ item.description }}</div>
+          <div class="infobox-rating">Rating: {{ item.rating }}/5</div>
           <div class="color-switcher">
               <div class="color-option" data-color="silver"></div>
               <div class="color-option" data-color="black"></div>
               <div class="color-option" data-color="dark red"></div>
             </div>
             <p class="selected-color-text"><span>Color:</span> silver</p>
-          <button class="buy-button">BUY | 999.99</button>
+          <button class="buy-button">BUY | {{ item.price }}</button>
       </div>
   </div>
 
