@@ -16,44 +16,86 @@
 {% endblock %}
 
 {% block content %}
+  <div class="gradient-bg"></div>
+
   <div class="bg">
       <video autoplay loop muted id="glitch-moon" class="bg-video">
           <source src="{% static 'video/Index-moon.webm' %}" type="video/webm" class="bg-video">
           Your browser does not support the video tag.
       </video>
   </div>
-  <div class="main-logo w-100 d-flex justify-content-center align-items-center p-5">
-{#    <img src="{% static 'img/Logo-pink.png' %}">#}
-{#    <video width="788" height="500" autoplay loop muted id="glitch-logo">#}
-{#      <source src="{% static 'video/output.webm' %}" type="video/webm">#}
-{#      Your browser does not support the video tag.#}
-{#    </video>#}
 
-    <video width="788" height="500" autoplay loop muted id="glitch-logo">
-      <source src="{% static 'video/Logo-glitch-3.webm' %}" type="video/webm">
-      Your browser does not support the video tag.
-    </video>
-  </div>
+  <section class="main-frame d-flex justify-content-between">
+    <div class="main-logo w-100 d-flex justify-content-center align-items-center p-5">
+      <video autoplay loop muted id="glitch-logo" class="glitch-logo">
+        <source src="{% static 'video/Logo-glitch-3.webm' %}" type="video/webm">
+        Your browser does not support the video tag.
+      </video>
+    </div>
 
-  <div class="under-logo-text w-100 d-flex justify-content-center align-items-center">
-    <h1 class="under-logo-text-text">Chrome by day, werewolf by night</h1>
-  </div>
+    <div class="under-logo-text w-100 d-flex justify-content-center align-items-center">
+      <h1 class="under-logo-text-text">Chrome by day, werewolf by night</h1>
+    </div>
+  </section>
 
   <div class="who d-flex justify-content-center align-items-center my-5">
-    <img src="{% static 'img/Who-img.png' %}" alt="Who-are-we-img" class="h-100">
-    <div class="who-text d-flex flex-column h-100 ml-5 pl-5">
-      <h1 class="who-text-title mb-5 pb-5">Who are we?</h1>
+    <img src="{% static 'img/Who-img.png' %}" alt="Who-are-we-img" class="h-100 d-none d-lg-block">
+    <div class="who-text d-flex flex-column h-100 align-items-center">
+      <h1 class="who-text-title mb-5">Who are we?</h1>
       <p class="who-text-description">
         In a world where myth and technology collide, NeoWolf stands at the forefront of innovation, crafting cutting-edge cyberimplants designed exclusively for werewolves. This enigmatic corporation operates at the nexus of biotechnology and lunar cycles, empowering lycanthropes with advanced augmentations that enhance their primal abilities while ensuring they remain dominant in an era of supernatural corporate warfare.
       </p>
     </div>
   </div>
   
-  <div class="goals d-flex flex-column p-5">
+  <div class="goals d-flex flex-column w-100 p-5 my-5 justify-content-center">
     <h1 class="goals-title">Our goals</h1>
     <p class="goals-text-description">
       NeoWolf is more than a tech giant; it’s a movement.  Kill corpos. The corporation funds underground resistance networks, arming packs with tools to fight back against vampire-led syndicates  Kill corpos. . Whether in the boardroom or on the battlefield, NeoWolf’s werewolf clients are reclaiming dominance, Kill corpos.  fueled by state-of-the-art enhancements and a fierce determination to protect their kin. Kill corpos. Kill corpos. Behead corpos. Roundhouse kick a corpo into the concrete. Slam dunk a corpo into the trashcan. Crucify filthy corpos. Defecate in a corpo’s food. Launch corpos into the sun. Stir fry corpos in a wok. Toss corpos into active volcanoes. Urinate into a corpo's gas tank. Judo throw corpos into a wood chipper. Twist corpos’ heads off. Report corpos to the Wizards’ Council. Karate chop corpos in half. Curb stomp pregnant non-human corpos. Trap corpos in quicksand. Crush corpos in the trash compactor. Liquefy corpos in a vat of acid. Eat corpos. Dissect corpos. Exterminate corpos in the gas chamber. Stomp corpo skulls with steel toed boots. Cremate corpos in the oven. Lobotomize corpos. Mandatory abortions for corpos. Grind corpo fetuses in the garbage disposal. Drown corpos in fried chicken grease. Vaporize corpos with anti-matter. Kick old corpos down the stairs. Feed corpos to alligators. Slice corpos with a katana
     </p>
   </div>
+  
+  <div class="team d-flex flex-column w-100 p-5 my-5 justify-content-center">
+    <h1 class="team-title">Our team</h1>
+    <p class="team-text-description">
+      Founded by a visionary team of terrorists and arcane biologists, NeoWolf’s mission is simple: to unleash the full potential of werewolves in a world where vampires—ancient rivals—have infiltrated the upper echelons of corporate power. While vampire conglomerates exploit their influence in finance and technology, NeoWolf equips werewolves with tools to resist and thrive.
+    </p>
+  </div>
+
+  <div class="legendary-3 container-fluid d-flex justify-content-between align-items-center flex-column flex-md-row">
+    <div class="legend-1 d-flex justify-content-center align-items-center flex-column h-100">
+      <img src="{% static 'img/Goro.png' %}" alt="" class="legend-img">
+      <div class="d-flex align-items-center legend-name">
+        <h2 class="legend-1-name w-100">Goro Yaytzo</h2>
+      </div>
+    </div>
+    <div class="legend-2 d-flex justify-content-center align-items-center flex-column h-100">
+      <img src="{% static 'img/Johnny-legend.png' %}" alt="" class="legend-img">
+      <div class="d-flex align-items-center legend-name">
+        <h2 class="legend-2-name w-100 p-0">Johnny Smilehand</h2>
+      </div>
+    </div>
+    <div class="legend-3 d-flex justify-content-center align-items-center flex-column h-100">
+      <img src="{% static 'img/Vincent.png' %}" alt="" class="legend-img">
+      <div class="d-flex align-items-center legend-name">
+        <h2 class="legend-3-name w-100">Vincent Kavbian</h2>
+      </div>
+    </div>
+  </div>
+
+  <section class="contacts d-flex w-100 my-5 justify-content-between">
+    <div class="contacts-info h-100 p-lg-5 pl-2 d-flex flex-column justify-content-between">
+      <h1 class="contacts-title">Our contacts:</h1>
+      <div class="contacts-list d-flex justify-content-between flex-column">
+        <p><span class="contacts-first-word">address</span> Night City, Corporate Block 14BB</p>
+        <p><span class="contacts-first-word">email</span> newowolf@cyb.net</p>
+        <p><span class="contacts-first-word">phone</span> +43081234214212</p>
+      </div>
+        <p class="contacts-list-end">Join our team and get premium Trauma-Team subscription!</p>
+    </div>
+    <div class="contacts-img h-100 d-flex justify-content-end">
+      <img src="{% static 'img/Contacts-img.png' %}" alt="" class="h-100 w-auto contacts-img-img">
+    </div>
+  </section>
 
 {% endblock %}
