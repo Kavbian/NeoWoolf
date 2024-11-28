@@ -5,12 +5,44 @@
   gap: 50px;
 }
 
+.collapsible {
+  background-color: var(--second-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 80%;
+  height: 2%;
+  border: none;
+  text-align: center;
+  outline: none;
+  font-size: 2vh;
+  font-family: 'Geist Mono', serif;
+}
+
+.arrow-down{
+  font-size: 4vh;
+  padding: 0 10px;
+}
+
+.active, .collapsible:hover {
+  background-color: #ccc;
+}
+
+.content-collapsible {
+  display: none;
+  overflow: hidden;
+}
+
 .item-about {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  width: 90%;
-  height: auto;
+  width: 100%;
+  height: 94vh;
   place-items: center;
+  gap: 50px;
 }
 
 .item-image {
@@ -34,8 +66,8 @@
 .carousel-images {
   display: flex;
   transition: transform 0.5s ease;
-  height: 100%;
   width: 100%;
+  aspect-ratio: 1;
 }
 
 .carousel-images img {
@@ -69,8 +101,14 @@
   grid-column: 2;
   display: flex;
   flex-direction: column;
-  gap: 50px;
-  padding-left: 10vw;
+  gap: 10px;
+  width: 100%;
+  height: 100%;
+  justify-content: space-between;
+}
+
+.item-infobox-middle {
+  display: none;
 }
 
 .infobox-title {
@@ -79,8 +117,8 @@
   color: #fff;
 }
 
-.infobox-description {
-  width: 70%;
+.infobox-description-lg {
+  width: 100%;
   font-size: 36px;
   color: #fff;
 }
@@ -138,7 +176,7 @@
   height: 10vh;
   color: #000000;
   cursor: pointer;
-  font-size: 26px;
+  font-size: 45px;
   font-weight: bold;
 }
 
@@ -240,8 +278,15 @@
   height: 7vh;
   color: #000000;
   cursor: pointer;
-  font-size: 22px;
+  font-size: 35px;
   font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.buy-other-button:hover {
+  color: var(--accent-color);
 }
 
 @media screen and (max-width: 1200px) {
@@ -254,7 +299,7 @@
     font-size: 36px;
   }
 
-  .infobox-description {
+  .infobox-description-lg {
     font-size: 20px;
     width: 100%;
   }
@@ -283,6 +328,10 @@
     flex-direction: column;
   }
 
+  .item-infobox-middle {
+    display: block;
+  }
+
   .item-about {
     display: flex;
     flex-direction: column;
@@ -303,8 +352,14 @@
     font-size: 64px;
   }
 
+  .infobox-description-lg {
+    display: none;
+  }
+
   .infobox-description {
+    color: white;
     font-size: 36px;
+    width: 100%;
   }
 
   .infobox-rating {
@@ -328,6 +383,13 @@
   .carousel-button {
     font-size: 50px;
   }
+
+  .carousel-images img {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: contain;
+  }
+
   .input-block input::placeholder {
     font-size: 25px;
   }
@@ -380,5 +442,9 @@
   .item-other {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(4, 1fr);
+  }
+
+  .arrow-down{
+    display: none;
   }
 }

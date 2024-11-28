@@ -15,6 +15,14 @@ class Item(models.Model):
     price = models.IntegerField()
     description = models.TextField()
     image = models.ImageField(default="Logo-pink.png", blank=True)
+    rating = models.FloatField(blank=True, null=True)
 
     def __str__(self):
         return self.name
+
+class ItemImages(models.Model):
+    item = models.ForeignKey(Item, on_delete=models.CASCADE)
+    image = models.ImageField(default="Logo-pink.png", blank=True)
+
+    def __str__(self):
+        return self.item.name

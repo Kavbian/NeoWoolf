@@ -10,25 +10,34 @@
           <button class="carousel-button left" onclick="prevImage()">❮</button>
           <div class="item-image-carousel">
               <div class="carousel-images">
-                  <img src="{{ item.image.url }}" alt="Placeholder 1">
-                  <img src="{{ item.image.url }}" alt="Placeholder 1">
-                  <img src="{{ item.image.url }}" alt="Placeholder 1">
+                  <img src="{{ item.image.url }}" alt="">
+                  {% for image in item.itemimages_set.all %}
+                      <img src="{{ image.image.url }}" alt="Image for {{ item.name }}">
+                  {% endfor %}
               </div>
           </div>
           <button class="carousel-button right" onclick="nextImage()">❯</button>
       </div>
       
       <div class="item-infobox">
-          <div class="infobox-title">SILVERHAND</div>
-          <div class="infobox-description">Upper limb implant to party like it's 2023</div>
-          <div class="infobox-rating">Rating: 4.5/5</div>
-          <div class="color-switcher">
-              <div class="color-option" data-color="silver"></div>
-              <div class="color-option" data-color="black"></div>
-              <div class="color-option" data-color="dark red"></div>
+          <div class="infobox-title">{{ item.name }}</div>
+          <div class="infobox-description-lg">{{ item.description }}</div>
+          <div class="item-infobox-middle">
+            <div class="btn collapsible"><span class="arrow-down">↓</span> Description <span class="arrow-down">↓</span></div>
+            <div class="content-collapsible">
+              <div class="infobox-description">{{ item.description }}</div>
+            </div>
+          </div>
+          <div class="item-infobox-bottom">
+            <div class="infobox-rating">Rating: {{ item.rating }}/5</div>
+            <div class="color-switcher">
+                <div class="color-option" data-color="silver"></div>
+                <div class="color-option" data-color="black"></div>
+                <div class="color-option" data-color="dark red"></div>
             </div>
             <p class="selected-color-text"><span>Color:</span> silver</p>
-          <button class="buy-button">BUY | 999.99</button>
+            <button class="buy-button">BUY | {{ item.price }}</button>
+          </div>
       </div>
   </div>
 
@@ -45,27 +54,13 @@
           <p>My imaginary friend used this one....well, not bad at all</p>
       </div>
   </div>
-  <div class="item-other">
-      <div class="other-card">
-          <img src="https://via.placeholder.com/100x100" alt="Ex1">
-          <h2>MassNeoEye</h2>
-          <button class="buy-other-button">BUY | 199.99</button>
-      </div>
-      <div class="other-card">
-          <img src="https://via.placeholder.com/100x100" alt="Ex2">
-          <h2>MassNeoEye</h2>
-          <button class="buy-other-button">BUY | 199.99</button>
-      </div>
-      <div class="other-card">
-          <img src="https://via.placeholder.com/100x100" alt="Ex3">
-          <h2>MassNeoEye</h2>
-          <button class="buy-other-button">BUY | 199.99</button>
-      </div>
-      <div class="other-card">
-          <img src="https://via.placeholder.com/100x100" alt="Ex4">
-          <h2>MassNeoEye</h2>
-          <button class="buy-other-button">BUY | 199.99</button>
-      </div>
-  </div>
+<div class="item-other">
+    {% for other_item in other_items %}
+    <div class="other-card">
+        <img src="{{ other_item.image.url }}" alt="{{ other_item.name }}">
+        <h2>{{ other_item.name }}</h2>
+        <a href="{% url 'shop:item-detail' other_item.pk %}" class="buy-other-button">BUY | {{ other_item.price }}</a>    </div>
+    {% endfor %}
+</div>
 </div>
 {% endblock %}
