@@ -41,6 +41,7 @@ header {
     height: auto;
     display: flex;
     justify-content: space-between;
+    box-shadow: var(--accent-color) 0 -2px 20px;
 }
 
 .recommendation-label {
@@ -53,6 +54,7 @@ header {
     width: 25vw;
     font-family: 'Geist Mono', monospace;
     font-weight: 300;
+    text-shadow: var(--second-color) 0 -2px 20px;
 }
 
 .btn-recommendation {
@@ -62,11 +64,23 @@ header {
     color: var(--second-color);
     clip-path: polygon(100% 0, 100% 42%, 90% 100%, 0 100%, 0 0);
     font-size: 250%;
-
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
+    animation: flicker 1s infinite; /* Виконується лише один раз */
+}
+
+@keyframes flicker {
+    0% {
+        text-shadow: none;
+    }
+    50% {
+        text-shadow: var(--second-color) 0 -2px 20px;
+    }
+    100% {
+        text-shadow: none;
+    }
 }
 
 .recommendation-image {
@@ -81,13 +95,16 @@ header {
     height: auto;
     margin: 2% 2%;
     padding: 2%;
+    box-shadow: var(--accent-color) 0 -2px 20px;
 }
+
 .item-list-item-img {
     width: 50%;
     object-fit: contain;
 }
 
 .item-list-item-info {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -96,6 +113,30 @@ header {
     width: 50%;
     padding-left: 5%;
     color: var(--second-color);
+}
+
+.item-list-item-info:before {
+    content: '';
+    position: absolute;
+    top: 30%;
+    left: 70%;
+    height: 70%;
+    width: 70%;
+    background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(156,13,80,1) 7%, rgba(0,212,255,0) 60%);    border-radius: 50%; /* Робимо елемент круглим */
+    transform: translate(-50%, -50%); /* Центруємо елемент точно по середині */
+    z-index: -1;
+}
+
+.item-list-item-info:after {
+    content: '';
+    position: absolute;
+    top: 60%;
+    left: 40%;
+    height: 80%;
+    width: 80%;
+    background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(156,13,80,1) 7%, rgba(0,212,255,0) 60%);    border-radius: 50%; /* Робимо елемент круглим */
+    transform: translate(-50%, -50%); /* Центруємо елемент точно по середині */
+    z-index: -1;
 }
 
 .item-list-item-info h3{
