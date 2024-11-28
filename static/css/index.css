@@ -105,7 +105,7 @@ body {
 }
 
 .who-text-title {
-    font-size: 8rem;
+    font-size: 7rem;
     font-family: 'Geist Mono', serif;
     font-weight: 300;
     color: var(--second-color);
@@ -181,7 +181,7 @@ body {
     font-family: 'Geist Mono', serif;
     font-weight: 300;
     color: var(--second-color);
-    font-size: 8rem;
+    font-size: 7rem;
     text-shadow: var(--second-color) 0 -2px 20px;
 }
 
@@ -237,14 +237,14 @@ body {
     font-family: 'Geist Mono', serif;
     font-weight: 300;
     color: var(--accent-color);
-    font-size: 8rem;
+    font-size: 7rem;
     text-shadow: rgba(156, 13, 80, 1) 0 -2px 20px;
 }
 
 .team-text-description {
     font-family: 'Geist Mono', serif;
     color: var(--accent-color);
-    font-size: 1.7rem;
+    font-size: 1.5rem;
     text-shadow: rgba(156, 13, 80, 1) 0 -2px 20px;
 }
 
@@ -269,6 +269,11 @@ body {
     width: 100%;
     height: 30%;
     text-align: center;
+    font-size: 1.5rem;
+}
+
+.legend-1-name, .legend-2-name, .legend-3-name {
+    font-size: 1.5rem;
 }
 
 .legend-1-name::before {
