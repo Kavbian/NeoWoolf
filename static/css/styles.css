@@ -260,6 +260,19 @@ header {
 }
 
 @media (max-width: 480px) {
+    .header-left {
+        flex-direction: column;
+    }
+
+    header {
+        height: auto;
+    }
+
+    .header-left a img{
+        width: 100%;
+       height: 5vh !important;
+    }
+
     .btn-recommendation {
         height: 4vh;
         font-size: 100%;

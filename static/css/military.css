@@ -190,7 +190,8 @@ body {
     }
   }
   .form-container {
-    background-color: #9C0D50;
+    border: 2px solid rgb(156, 13, 80, 1);
+    background-color: rgb(156, 13, 80, 0.5);
     padding: 30px;
     border-radius: 8px;
     width: 90%;
@@ -199,6 +200,7 @@ body {
 }
 
 .form-container form {
+
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
@@ -209,11 +211,13 @@ body {
     display: flex;
     flex-direction: column;
     gap: 15px;
+    justify-content: space-between;
 }
 
 .form-container h1 {
     text-align: center;
     margin-bottom: 20px;
+    color: white;
 }
 
 .form-group {
@@ -224,6 +228,7 @@ body {
     display: block;
     margin-bottom: 5px;
     font-weight: bold;
+    color: white;
 }
 
 .form-container input[type="text"],
@@ -242,22 +247,27 @@ body {
 .form-container input[type="checkbox"] {
     width: auto;
     margin-right: 5px;
-    accent-color: #9C0D50;
+      color: white;
 }
-
+.form-container input::placeholder {
+    color: white;
+    opacity: 1;
+}
 .form-container p {
     margin: 0 0 5px;
+    color: white;
 }
 .join-btn {
     display: block;
     width: 100%;
     padding: 10px;
-    background-color: #C2F9BB;
-    color: #9C0D50;
-    border: none;
+    background-color: rgb(194, 249, 187, 0.5);
+    border: 2px solid #C2F9BB;
+      color: white;
     border-radius: 4px;
-    font-size: 16px;
+    font-size: 30px;
     font-weight: bold;
+    height: auto;
 }
 
 .join-btn:hover {
