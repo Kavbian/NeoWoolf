@@ -1,0 +1,321 @@
+:root {
+    --accent-color: #9C0D50;
+    --second-color: #C2F9BB;
+
+}
+
+body {
+    background-color: black;
+}
+
+.content {
+    margin: 0 10vw;
+    box-sizing: border-box;
+}
+
+header {
+    height: 50px;
+    background-color: black;
+    border: var(--accent-color) 2px solid;
+    padding: 1vh 10vw;
+}
+
+.profile-picture {
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+
+.profile-picture-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.recommendation {
+    border: var(--accent-color) 3px solid;
+    background: linear-gradient(to right, black, var(--accent-color));
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: var(--accent-color) 0 -2px 20px;
+}
+
+.recommendation-label {
+    height: 100%;
+    gap: 5vh;
+}
+.recommendation-title {
+    color: var(--second-color);
+    font-size: 5vh;
+    width: 25vw;
+    font-family: 'Geist Mono', monospace;
+    font-weight: 300;
+    text-shadow: var(--second-color) 0 -2px 20px;
+}
+
+.btn-recommendation {
+    height: 7vh;
+    width: 85%;
+    background-color: var(--accent-color);
+    color: var(--second-color);
+    clip-path: polygon(100% 0, 100% 42%, 90% 100%, 0 100%, 0 0);
+    font-size: 250%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    animation: flicker 1s infinite; /* Виконується лише один раз */
+}
+
+@keyframes flicker {
+    0% {
+        text-shadow: none;
+    }
+    50% {
+        text-shadow: var(--second-color) 0 -2px 20px;
+    }
+    100% {
+        text-shadow: none;
+    }
+}
+
+.recommendation-image {
+    height: 100%;
+    width: 60%;
+    object-fit: contain;
+}
+
+.item-list-item {
+    border: var(--accent-color) 2px solid;
+    width: 45%;
+    height: auto;
+    margin: 2% 2%;
+    padding: 2%;
+    box-shadow: var(--accent-color) 0 -2px 20px;
+}
+
+.item-list-item-img {
+    width: 50%;
+    object-fit: contain;
+}
+
+.item-list-item-info {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2vh;
+    height: 100%;
+    width: 50%;
+    padding-left: 5%;
+    color: var(--second-color);
+}
+
+.item-list-item-info:before {
+    content: '';
+    position: absolute;
+    top: 30%;
+    left: 70%;
+    height: 70%;
+    width: 70%;
+    background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(156,13,80,1) 7%, rgba(0,212,255,0) 60%);    border-radius: 50%; /* Робимо елемент круглим */
+    transform: translate(-50%, -50%); /* Центруємо елемент точно по середині */
+    z-index: -1;
+}
+
+.item-list-item-info:after {
+    content: '';
+    position: absolute;
+    top: 60%;
+    left: 40%;
+    height: 80%;
+    width: 80%;
+    background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(156,13,80,1) 7%, rgba(0,212,255,0) 60%);    border-radius: 50%; /* Робимо елемент круглим */
+    transform: translate(-50%, -50%); /* Центруємо елемент точно по середині */
+    z-index: -1;
+}
+
+.item-list-item-info h3{
+    font-size: 150%;
+    font-family: 'Geist Mono', monospace;
+    font-weight: 300;
+    width: 100%;
+    height: auto;
+}
+
+.item-list-item-info p{
+    height: auto;
+    text-overflow: ellipsis;
+}
+
+.item-list-item-info .btn{
+    width: 100%;
+    height: 5vh;
+    color: black;
+    background-color: var(--second-color);
+    border-radius: 0;
+    clip-path: polygon(100% 0, 100% 42%, 90% 100%, 0 100%, 0 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 150%;
+}
+
+.header-military {
+    position: relative;
+    color: white;
+    text-decoration: none;
+    font-family: 'Geist Mono', monospace;
+    font-weight: 700;
+    z-index: 1;
+}
+
+.header-military:hover {
+    color: #cccccc;
+    text-decoration: none;
+}
+
+.header-military:hover::before,
+.header-military:hover::after {
+    content: "MILITARY";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    animation: glitch 1.2s steps(2, end) infinite;
+}
+
+.header-military:hover::before {
+    color: darkred;
+    z-index: -2;
+}
+
+.header-military:hover::after {
+    color: darkorchid;
+    z-index: -3;
+    animation-delay: 0.2s;
+}
+
+@keyframes glitch {
+    0% {
+        transform: translate(2px, -2px);
+    }
+    20% {
+        transform: translate(-2px, 2px);
+    }
+    40% {
+        transform: translate(0, 0);
+    }
+    60% {
+        transform: translate(-1px, 1px);
+    }
+    80% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(-1px, -1px);
+    }
+}
+
+.header-chrome {
+    position: relative;
+    color: white;
+    text-decoration: none;
+    font-family: 'Geist Mono', monospace;
+    font-weight: 700;
+    z-index: 1;
+}
+
+.header-chrome:hover {
+    color: #cccccc;
+    text-decoration: none;
+}
+
+.header-chrome:hover::before,
+.header-chrome:hover::after {
+    content: "CHROME";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    animation: glitch 1.2s steps(2, end) infinite;
+}
+
+.header-chrome:hover::before {
+    color: darkred;
+    z-index: -2;
+}
+
+.header-chrome:hover::after {
+    color: darkorchid;
+    z-index: -3;
+    animation-delay: 0.2s;
+}
+
+@media (max-width: 1024px) {
+    .recommendation-title {
+        font-size: 3vh;
+    }
+
+    .btn-recommendation {
+        font-size: 3vh;
+    }
+
+    .item-list-item {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .recommendation {
+        position: relative;
+    }
+
+    .recommendation-title {
+        display: none;
+    }
+
+    .btn-recommendation {
+        position: absolute;
+        width: 50vw;
+        left: 50%;
+        bottom: 0;
+        height: 6vh;
+        font-size: 120%;
+        transform: translate(-50%, -50%);
+    }
+
+    .recommendation-image {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .btn-recommendation {
+        height: 4vh;
+        font-size: 100%;
+        padding: 0.5rem;
+    }
+
+    .item-list-item-info h3 {
+        font-size: 100%;
+    }
+
+    .item-list-item-info p {
+        font-size: 90%;
+    }
+
+    .item-list-item-info .btn {
+        font-size: 90%;
+    }
+}
